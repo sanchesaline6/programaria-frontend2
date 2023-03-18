@@ -7,8 +7,8 @@ function carregaDicionario() {
   //   'Conceição Evaristo',
   //   'Lélia Gonzalez',
   // ];
-  let biografias = {
-    bio01: {
+  let biografias = [
+    {
       nome: 'Marielle Franco',
       imagem: 'https://i.postimg.cc/8fS8KSGX/marielle-franco.png',
       descricao: ` Marielle Francisco da Silva, conhecida como Marielle Franco, foi uma
@@ -23,7 +23,7 @@ function carregaDicionario() {
       citacao: `Quantos mais vão precisar morrer para que essa guerra aos pobres
       acabe?`,
     },
-    bio02: {
+    {
       nome: 'Lélia Gonzalez',
       imagem: 'https://i.postimg.cc/2q1f3GTG/lelia-gonzalez.png',
       descricao: `Lélia Gonzalez foi uma intelectual, política, professora e
@@ -38,7 +38,7 @@ function carregaDicionario() {
       citacao: `A gente não nasce negro, a gente se torna negro. É uma conquista
       dura, cruel e que se desenvolve pela vida da gente afora.`,
     },
-    bio03: {
+    {
       nome: 'Angela Davis',
       imagem: 'https://i.postimg.cc/LJ6SF21r/angela-davis.png',
       descricao: `Angela Yvonne Davis é uma professora e filósofa socialista
@@ -51,7 +51,7 @@ function carregaDicionario() {
       citacao: `Não aceito mais as coisas que não posso mudar, estou mudando as
       coisas que não posso aceitar.`,
     },
-    bio04: {
+    {
       nome: 'Conceição Evaristo',
       imagem: 'https://i.postimg.cc/Z9XzNNMS/conceicao-evaristo.png',
       descricao: `Maria da Conceição Evaristo de Brito nasceu em Belo Horizonte, em
@@ -67,7 +67,7 @@ function carregaDicionario() {
       citacao: `O importante não é ser o primeiro ou primeira, o importante é
       abrir caminhos.`,
     },
-    bio05: {
+    {
       nome: 'Carolina de Jesus',
       imagem: 'https://i.postimg.cc/Fdc5VKMJ/carolina-de-jesus.png',
       descricao: `Carolina Maria de Jesus foi uma escritora brasileira, conhecida por
@@ -82,7 +82,7 @@ function carregaDicionario() {
       citacao: `Ah, comigo o mundo vai modificar-se. Não gosto do mundo como ele
       é.`,
     },
-    bio06: {
+    {
       nome: 'Rosa Parks',
       imagem: 'https://i.postimg.cc/K1q2Zw74/rosa-parks.png',
       descricao: `Rosa Louise McCauley, mais conhecida por Rosa Parks, foi uma
@@ -95,11 +95,25 @@ function carregaDicionario() {
       citacao: `⁠Você nunca deve ter medo do que está fazendo quando está
       certo.`,
     },
-  };
+  ];
   //alert(biografias);
   //console.log(biografias);
 
   var content = document.getElementById('content');
+  biografias.sort((a, b) => {
+    let fa = a.nome.toLowerCase(),
+      fb = b.nome.toLowerCase();
+
+    if (fa < fb) {
+      return -1;
+    }
+
+    if (fa > fb) {
+      return 1;
+    }
+
+    return 0;
+  });
 
   for (let bio in biografias) {
     const { nome, imagem, descricao, citacao } = biografias[bio];
