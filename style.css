@@ -1,0 +1,111 @@
+/* Pontos de quebra (breakpoints) são quando definimos em quais momentos o nosso site
+irá sofrer alterações visualmente. Quanto o breakpoint é definido consguimos dizer ao 
+navegador que dependendo da forma como ele será visualizado poderá ter um visual ou 
+comportamento diferente, através da @media.
+
+A media query é uma regra que determina uma condicional para cada tipo de dispositivo.
+Então dependendo de qual resolução você poderá inluir regras específicas para ele*/
+
+/* Para utilizarmos o @media podemos escrever de duas formas: usando o screen para definir
+o tipo de media ou apenas @media. Não há preferência, uma regra obrigatória de usar um ou outro, 
+geralmente quando deixamos algo muito específico assim é quando há o cenário do media print 
+(que serve para definirmos como o nosso arquivo será impresso, algo muito comum em sites de 
+resultados de exames, laudos, documentos, processos judiciais, etc), por exemplo.  */
+
+/* Se a pessoa que vai acessar meu site estiver no computador de largura X 
+mostra o site para ela dessa forma */
+
+/* Se a pessoa que esteja acessando meu site esteja num tablet de largura Y 
+mostre o site para ela dessa forma */
+
+/* Se a pessoa estiver acessando meu site por um smartphone de largura Z 
+mostre o site para ela dessa forma */
+
+@media (max-width: 768px) {
+  header {
+    margin-bottom: 20px;
+    height: 200px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .card {
+    display: block;
+    margin: 20px 10px;
+  }
+
+  .card img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .card details {
+    width: 100%;
+  }
+
+  .card details summary {
+    font-size: 16px;
+  }
+
+  .card details p {
+    font-size: 14px;
+  }
+}
+
+body {
+  font-family: Open-Sans, sans-serif;
+}
+
+header {
+  height: 100px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 40px;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+section {
+  margin: 0 auto;
+  display: block;
+  max-width: 1024px;
+  width: 100%;
+}
+
+.card {
+  display: inline-block;
+  margin: 10px;
+  border: 1px solid #000;
+  max-height: 100%;
+  vertical-align: top;
+}
+
+.card img {
+  display: block;
+  width: 300px;
+  height: 300px;
+}
+
+.card details {
+  width: 300px;
+  height: auto;
+  display: inline-block;
+}
+
+.card details summary {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.card details p {
+  padding: 0 10px;
+}
+
+.card details blockquote {
+  color: #777;
+  font-style: italic;
+}

@@ -1,0 +1,25 @@
+div {
+  border: 1px solid black;
+  margin: 10px 20px;
+  padding: 20px;
+  display: inline-block;
+}
+/* Tamanho padrão para tablets na posição vertical */
+@media (max-width: 768px) {
+  div {
+    border: 5px solid green;
+    display: block;
+    padding: 10px;
+    margin: 5px 10px;
+  }
+
+  h2 {
+    font-size: 36px;
+    color: blue;
+    text-decoration: underline;
+  }
+
+  p {
+    color: red;
+  }
+}
